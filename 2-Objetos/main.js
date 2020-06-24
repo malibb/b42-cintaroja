@@ -1,5 +1,5 @@
 // Definición de objeto literal
-
+const variable = null;
 const persona1 = {
     // clave: valor
     name: 'Mali',

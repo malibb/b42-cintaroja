@@ -56,9 +56,10 @@ mascotas.push('Paloma');
 console.log(mascotas);
 
 function nombreFuncion() {
-   // function this
+   return 'Mensaje';
 }
 
+console.log(nombreFuncion());
 // Definición de una función
 const nombreArrowFunction = () => {
     // todo el archivo this
