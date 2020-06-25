@@ -15,13 +15,24 @@ const carro = {
     }
 }
 
-// Clase 
-// va a ser la plantilla para hacer objetos.
-// tener la palabra reservada class
+/* 
 
+Clase 
+
+- Es la plantilla para hacer objetos.
+- Utiliza la palabra reservada 'class'.
+
+El siguiente ejemplo es la definición de la clase
+Carro y el uso de sus propiedades y atributos.
+
+*/
 class Carro {
+/* 
+    El método constructor es necesario
+    para agregar propiedades a las clases.
+*/
     constructor(duenio, color, velocidad, ruedas, motor, tipoRueda) {
-        // inicializar variables
+        // Inicializar variables
         this.duenio = duenio;
         this.color = color;
         this.velocidad = velocidad;
@@ -30,7 +41,10 @@ class Carro {
         this.tipoRueda = tipoRueda;
         this.vendido = false;
     };
-
+    /*
+    Los métodos deben estar dentro de la clase, sin embargo a diferencia del
+    objeto literal, estos no están separador por , puesto que son funciones.
+    */
     arranca() {
         // evaluando que this.vendido sea igual con true
         if(this.vendido) {
@@ -44,13 +58,15 @@ class Carro {
 
     frena() {
         console.log('iiiiiii');
+        return true;
     };
 
     doblar() {
         console.log('el carro está doblando');
+        return true;
     };
 }
-
+// Clase rueda.
 class Rueda {
     constructor(rin, rodada) {
         // inicializar variables
@@ -59,10 +75,18 @@ class Rueda {
     };
 }
 
-// instancia de la clase === objeto de tipo (inserte nombre de la clase)
-// Clase Carro
-// carro1 => instancia de la clase === objeto de tipo Carro.
-// new Carro
+/*
+
+En las siguientes lineas crearemos objetos de las clases arriba mencionadas,
+recordemos:
+
+ instancia de la clase === objeto de tipo (inserte nombre de la clase)
+
+ Para la clase Carro: 
+    carro1 => (instancia de la clase === objeto de tipo Carro)
+    new Carro() => nos devuelve un objeto
+
+*/
 
 
 // Carro.constructor();
