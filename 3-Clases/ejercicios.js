@@ -4,7 +4,7 @@
 	 calcularIMC()
 	 esMayorDeEdad()
 	 El constructor pide nombre, edad,sexo,peso y altura
-     Generar el RFC a partir de el nombre, edad, fechaNacimiento y sexo
+     Generar el RFC a partir de el nombre, fechaNacimiento y sexo
 */
 class Persona {
     constructor(fechaNacimiento){
