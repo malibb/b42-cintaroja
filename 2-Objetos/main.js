@@ -1,4 +1,20 @@
 // Definición de objeto literal
+const objeto = {
+    nombre:'',
+    edad: 0,
+    metodo () {
+        return 22;
+    }
+}
+
+objeto.nombre;
+objeto.edad;
+objeto.metodo; //metodo () { return 22; }
+objeto.metodo(); // devolver 22
+objeto.nuevaPropiedad = 'valor de la nueva propiedad';
+
+console.log(objeto);
+
 const variable = null;
 const persona1 = {
     // clave: valor
