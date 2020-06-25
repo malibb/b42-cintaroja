@@ -125,3 +125,29 @@ devolverValores();
 
 console.log(1/0);
 console.log(0/0);
+
+/**Arrow function */
+const nombreArrow4 = () => {
+}
+const nombreArrow5 = parametro => {}
+
+const nombreArrow3 = parametro => {
+    return 'Algo';
+}
+
+const nombreArrow2 = parametro => 'Algo';
+
+const nombreArrow1 = (parametro1, parametro2)=> {}
+
+const nombreArrow = (parametro1, parametro2)=> {
+    return 'Algo';
+};
+
+const variableNueva = nombreArrow3(1);
+
+
+/** Agrupar información por funcionalidades */
+
+const devolverTiposDeDatos = () => {
+    nombreAmigo
+}
