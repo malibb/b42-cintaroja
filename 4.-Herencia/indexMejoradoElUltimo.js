@@ -21,7 +21,6 @@ class Persona extends Animal{
         console.log('Bla bla bla, palabras, palabras, palabras')
     }
 }
-// Perro
 class Mascota extends Animal{
     // super va a equivaler a una instancia del objeto de la clase que 
     //heredamos que se une con los nuevos atributos y métodos de la nueva clase.
