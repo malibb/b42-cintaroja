@@ -1,1 +1,1 @@
-// Agregar 1 método y dos cracterísticas extras diferentes de las de largometraje y pelicula
+// Agregar 1 método y dos características extras diferentes de las de largometraje y pelicula

@@ -14,6 +14,9 @@ class Cine {
     constructor() {
 
     }
+    reproducir(){
+        
+    }
 }
 
 module.exports = { 
