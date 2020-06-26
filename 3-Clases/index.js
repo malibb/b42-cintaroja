@@ -107,4 +107,10 @@ carro2.precio = 200000;
 carro1.arranca();
 carro2.vendido = true;
 carro2.arranca();
+
+const arreglo = ['1','2','3'];
+ // '2'
+const nombre = 'Malinali Becerril Bernal'
+const arregloPalabras = nombre.split(' '); // ['Malinali','Becerril','Bernal'];
 // console.log(carro1.arranca());
+console.log(`${arregloPalabras[1].charAt(0).toUpperCase()}${arregloPalabras[1].charAt(1).toUpperCase()}`);
