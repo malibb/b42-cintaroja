@@ -16,3 +16,24 @@ function funcionCualquiera(callback) {
 funcionCualquiera(texto => {
    return 'me estoy ejecutando' + texto;
 });
+
+const escribir = (mensaje) => {
+    console.table(mensaje);
+}
+
+const ordenSuperior = (mensaje, callback) => {
+    callback(mensaje);
+}
+
+ordenSuperior('Hola Mundo', escribir);
+
+const compararHoras = (arreglo) => {
+    return nuevoArreglo;
+}
+
+const mayorQueDosHoras = (arreglo, callback) => {
+    return arregloFinal;
+} 
+const arreglo = [200,300,100,60];
+
+mayorQueDosHoras(arreglo, compararHoras);
