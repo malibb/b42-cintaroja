@@ -1,0 +1,16 @@
+{
+  "name": "peticiones",
+  "version": "1.0.0",
+  "description": "Peticiones 42",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "poke": "node pokemon.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "malibb",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
