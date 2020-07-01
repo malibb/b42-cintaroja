@@ -30,11 +30,9 @@ const [arregloDeFrutas, noDeFrutas] = crearArreglo('Pera','manzana','melon');
     console.log(n1);
 */
 
-
-
 function getOneUnit(error, response, body) {
-    const newBody = JSON.parse(body);
     if(response.statusCode === 200) {
+        const newBody = JSON.parse(body);
         console.log(`Es la unidad ${newBody.name} que se describe como ${newBody.description}`);
     }
     // ¿Cómo le haría para traer la siguiente oración por medio de peticiones?
