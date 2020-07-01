@@ -42,11 +42,12 @@ request(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${star_date}&end_date=
        const filtro = arreglo.reduce((acumulador, valorActual) => [
                 ...acumulador,
                 ...valorActual
-        ], [])
+        ], []) // [{}, {}]
+        // asteriode { nombreAsteroide, peligroso }
         .map(({ nombreAsteroide, peligroso })=> {
             return `El asteriode ${nombreAsteroide} ${ peligroso ? 'es PELIGROSO' : 'no es peligroso'}`;
         });
-        
+
         console.log(filtro);
         /*
         ... => spread Operator deshacer un objeto en sus partes
