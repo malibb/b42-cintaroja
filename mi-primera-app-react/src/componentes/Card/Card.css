@@ -1,0 +1,10 @@
+.card{
+    height: 40vh;
+    width: 20vh;
+    border: 1px solid black;
+}
+
+.img-card{
+    width: 15vh;
+    height: auto;
+}
