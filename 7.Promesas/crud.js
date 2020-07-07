@@ -21,7 +21,7 @@ const pasarMisDatosPorElCRUSD = (author) => {
         if(status === 201){
             console.log(`Creaste un nuevo usuario con el id ${data.id}`);
         }
-    })   
+    })
 }
 
 pasarMisDatosPorElCRUSD(author);
