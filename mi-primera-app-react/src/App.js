@@ -17,11 +17,8 @@ function App({ id, color, children }) {
     <div className="App">
       <header className="App-header" style={{ backgroundColor: background }}>
       {children}
-      <h1>{valor}</h1>
-        <p>
-          Hola Mundo!
+      <h5>{valor}</h5>
           {/* Soy un comentario en JS dentro de código JSX */}
-        </p>
       <button onClick={()=>{setValor(valor+1)}}>Aumentar :D</button>
       <button onClick={()=>{setValor(valor-1)}}>Reste :D</button>
       <button onClick={()=>{setBackground('green')}}>Cambiar Color</button>
