@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Card from './componentes/Card/Card';
+import CardManager from './componentes/CardManager/CardManager';
 import * as serviceWorker from './serviceWorker';
 
 /**
+
  * 1. Strict Mode: Nos fuerza errores en el ambiente de desarrollo en el ciclo de vida del componente.
  * 2. Todas nuestras etiquetas deben cerrarse.
  * 3. Sólamente se pueda renderizar un componente.
@@ -21,14 +22,13 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-
     <App id="1" color="pink">
-      <Card title="La mejor card" src="https://wallpaperaccess.com/full/85323.png"/>
+      <CardManager/>
     </App>
-    <App id="2" color="blue">
+    {/* <App id="2" color="blue">
       <input type="text" placeholder="Escribe tu nombre"></input>
     </App>
-    <App id="3"/>
+    <App id="3"/> */}
   </React.StrictMode>
   ,
   document.getElementById('root')
