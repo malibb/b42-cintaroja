@@ -22,7 +22,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App id="1" color="pink">
+    <App color="skyblue">
       <CardManager/>
     </App>
     {/* <App id="2" color="blue">

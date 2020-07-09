@@ -20,8 +20,15 @@ const CardManager = () => {
     }
 
     useEffect(()=>{
+        if(indiceResultadoActual > 0) {
+            setIndiceResultadoActual(0);
+        }
         getGifts();
-    }, [palabra, indiceResultadoActual]);
+    }, [palabra]);
+
+    useEffect(()=>{
+        getGifts();
+    }, [indiceResultadoActual]);
 
     const getGifts = () => {
         axios.get(`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${palabra}&limit=${numerDeElementosPorPeticion}&offset=${indiceResultadoActual}&lang=es`)
