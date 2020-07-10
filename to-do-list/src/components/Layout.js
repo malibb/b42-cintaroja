@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 const Layout = ({title,children}) => {
     return(
-        <div className="h-100 d-inline-block" >
+        <div className="container">
         <Navbar title={title}/>
         {children}
         <Footer/>
