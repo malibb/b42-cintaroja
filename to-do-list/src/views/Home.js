@@ -24,14 +24,21 @@ const Home = () => {
         ? <h1>No hay Tareas</h1>
         : Object.keys(tasks).map(task => <Task 
             key={task} 
+            id={task}
             title={tasks[task].title} 
             time={tasks[task].time}
+            description={tasks[task].description}
+            done={tasks[task].done}
+            priority={tasks[task].priority}
+            isHome={true}
             />);
     }; 
 
     return(
     <Layout title="Home">
-        {showTasks()}
+        <div className="d-flex justify-content-center">
+            {showTasks()}
+        </div>
     </Layout>
     );
 };

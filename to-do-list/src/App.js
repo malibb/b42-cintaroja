@@ -20,7 +20,7 @@ function App() {
         <Route exact path="/task/add">
           <AddTask></AddTask>
         </Route>
-        <Route exact path="/task/:id/:gatito">
+        <Route exact path="/task/:id">
           <Task></Task>
         </Route>
         <Route path="*">
