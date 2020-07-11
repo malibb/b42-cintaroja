@@ -76,7 +76,7 @@ const AddTask = () => {
     <h1>AddTask</h1>
         <div>
             <div className="form-group">
-                <label for="title">Titulo de la tarea : </label>
+                <label for="title">Titulo de la tarea: </label>
                 <input type="text" className="form-control" id="title" 
                 value={task.title} onChange={handleChange}/>
             </div>

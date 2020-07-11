@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState }from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 const Task = ({ id, title, description, done, time, priority, isHome }) => {
     const history = useHistory();
+    const [check, setCheck] = useState(done);
+    const url = `https://prueba-cinta-roja-mali.firebaseio.com/tasks/${id}.json`;
+
+    const handleChange = () => {
+      axios.patch(url, { done: !check })
+      .then(({data}) => {
+        setCheck(data.done);
+      })
+      .catch(() => {
+        // solo se ejecuta cuando la petición está mal.
+        alert('No seas mentiroso no has hecho la tarea.');
+      });
+    }
 
     const deleteTask = () => {
-      axios.delete(`https://prueba-cinta-roja-mali.firebaseio.com/tasks/${id}.json`)
+      axios.delete(url)
       .then(() => {
         history.push('/');
       })
@@ -25,8 +38,8 @@ const Task = ({ id, title, description, done, time, priority, isHome }) => {
           ? 
           <>
           <div className="form-group form-check">
-                <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                <label className="form-check-label" for="exampleCheck1">Terminaste la tarea?</label>
+                <input type="checkbox" className="form-check-input" id="done" checked={check} onChange={handleChange}/>
+                <label className="form-check-label" htmlFor="exampleCheck1">Terminaste la tarea?</label>
           </div>
           <Link to={`/task/${id}`} className="card-link">Ir al detalle </Link>
           </>
@@ -39,7 +52,6 @@ const Task = ({ id, title, description, done, time, priority, isHome }) => {
           <Link to="/" className="card-link">Ir a inicio </Link>
           </>
           }
-          <checkbox value={done}></checkbox>
         </div>
       </div>
     );
