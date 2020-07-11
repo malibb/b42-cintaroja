@@ -34,6 +34,7 @@ const Task = () => {
             error 
             ? <h1>{JSON.stringify(error)}</h1>
             : <T
+            id={id}
             title={task.title} 
             time={task.time}
             description={task.description}
