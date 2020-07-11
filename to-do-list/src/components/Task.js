@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Task = ({ id, title, description, done, time, priority, isHome }) => {
     return(
-    <div className="card" style={{width: '18rem'}}>
+    <div className="card" style={{width: '18rem', height:'13rem'}}>
         <div className="card-body">
         <h4>{priority}</h4>
         <h5 className="card-title">{title}</h5>

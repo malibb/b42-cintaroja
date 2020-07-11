@@ -36,7 +36,7 @@ const Home = () => {
 
     return(
     <Layout title="Home">
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center flex-wrap overflow-auto " >
             {showTasks()}
         </div>
     </Layout>
