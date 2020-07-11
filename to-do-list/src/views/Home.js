@@ -5,6 +5,7 @@ import axios from 'axios';
 
 const Home = () => {
     const [tasks , setTasks] = useState({});
+    const [ error, setError ] = useState(null);
 
     useEffect(() => {
         getTaks();
@@ -13,15 +14,20 @@ const Home = () => {
     const getTaks = () => {
         axios.get('https://prueba-cinta-roja-mali.firebaseio.com/tasks.json')
         .then(({data, status}) => {
-            if (status === 200){
+            if (data !== null){
                 setTasks(data);
+            } else {
+                setError('No hay tareas');
             }
+        })
+        .catch(({response}) => {
+            setError(response);
         });
     }
 
     const showTasks = () => {
-        return Object.keys(tasks).length <= 0 
-        ? <h1>No hay Tareas</h1>
+        return error
+        ? <h1>{error}</h1>
         : Object.keys(tasks).map(task => <Task 
             key={task} 
             id={task}

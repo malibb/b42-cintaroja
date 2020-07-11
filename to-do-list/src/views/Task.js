@@ -15,12 +15,14 @@ const Task = () => {
     const getTask = () => {
         axios.get(`https://prueba-cinta-roja-mali.firebaseio.com/tasks/${id}.json`)
         .then(({data, status}) => {
-            if (status === 200){
+            if (data !== null){
                 setTask(data);
+            } else {
+                setError('No existe esa tarea');
             }
         })
         .catch(({response}) => {
-            setError(response.error);
+            setError(response);
         });
     }
     
@@ -30,7 +32,7 @@ const Task = () => {
         <h2>{id}</h2>
         {
             error 
-            ? <h1>No existe esa tarea</h1>
+            ? <h1>{JSON.stringify(error)}</h1>
             : <T
             title={task.title} 
             time={task.time}
