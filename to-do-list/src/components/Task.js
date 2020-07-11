@@ -22,7 +22,14 @@ const Task = ({ id, title, description, done, time, priority, isHome }) => {
         <h5 className="card-title">{title}</h5>
           <h6 className="card-subtitle mb-2 text-muted">Tiempo para realizarla: {time} hora</h6>
           { isHome 
-          ? <Link to={`/task/${id}`} className="card-link">Ir al detalle </Link>
+          ? 
+          <>
+          <div className="form-group form-check">
+                <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+                <label className="form-check-label" for="exampleCheck1">Terminaste la tarea?</label>
+          </div>
+          <Link to={`/task/${id}`} className="card-link">Ir al detalle </Link>
+          </>
             : 
           <>
           <p className="card-text">{description}</p>

@@ -8,10 +8,12 @@ const Task = () => {
     const { id } = useParams();
     const [ task, setTask ] = useState({});
     const [ error, setError ] = useState(null);
+
     useEffect(() => {
         getTask();
     }, []);
-
+    // SI usamos un arreglo vacio sólo se ejecuta al montarse.
+    
     const getTask = () => {
         axios.get(`https://prueba-cinta-roja-mali.firebaseio.com/tasks/${id}.json`)
         .then(({data, status}) => {
