@@ -39,6 +39,8 @@ const AddTask = () => {
                     time: parseInt(event.target.value),
                 });
             break;
+            default:
+                break;
         }
         // task 'Title'
     };
@@ -76,22 +78,22 @@ const AddTask = () => {
     <h1>AddTask</h1>
         <div>
             <div className="form-group">
-                <label for="title">Titulo de la tarea: </label>
+                <label htmlFor="title">Titulo de la tarea: </label>
                 <input type="text" className="form-control" id="title" 
                 value={task.title} onChange={handleChange}/>
             </div>
             <div className="form-group">
-                <label for="description">Descripción : </label>
+                <label htmlFor="description">Descripción : </label>
                 <input type="text" className="form-control" id="description" 
                 value={task.description} onChange={handleChange}/>
             </div>
             <div className="form-group">
-                <label for="time">Tiempo: </label>
+                <label htmlFor="time">Tiempo: </label>
                 <input type="number" className="form-control" id="time" max="24" min="1" 
                 value={task.time} onChange={handleChange}/>
             </div>
             <div className="form-group">
-                <label for="priority">Prioridad: </label>
+                <label htmlFor="priority">Prioridad: </label>
                 <input type="number" className="form-control" id="priority" max="5" min="1" 
                 value={task.priority} onChange={handleChange}/>
             </div>

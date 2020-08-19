@@ -7,10 +7,13 @@ const Task = ({ id, title, description, done, time, priority, isHome }) => {
     const [check, setCheck] = useState(done);
     const url = `https://prueba-cinta-roja-mali.firebaseio.com/tasks/${id}.json`;
 
-    const handleChange = () => {
-      axios.patch(url, { done: !check })
-      .then(({data}) => {
-        setCheck(data.done);
+    const handleChange = (event) => {
+      // check falso
+      // evento true
+      setCheck(event.target.checked);
+      // check true
+      axios.patch(url, { done: check })
+      .then(({data}) => { 
       })
       .catch(() => {
         // solo se ejecuta cuando la petición está mal.

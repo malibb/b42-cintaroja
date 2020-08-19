@@ -23,6 +23,9 @@ function App() {
         <Route exact path="/task/:id">
           <Task></Task>
         </Route>
+        <Route exact path="/task/:id/edit">
+          <Task detail={true}></Task>
+        </Route>
         <Route path="*">
           <P404></P404>
         </Route>

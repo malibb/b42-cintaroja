@@ -6,7 +6,7 @@ const P404 = () => {
     return(
     <Layout>
         <div className="row">
-            <img src="https://http.cat/404"></img>
+            <img src="https://http.cat/404" alt="img"></img>
         </div>
         <Link to="/">
             <button className="btn-primary">Inicio</button>

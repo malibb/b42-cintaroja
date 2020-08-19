@@ -8,25 +8,24 @@ const Task = () => {
     const { id } = useParams();
     const [ task, setTask ] = useState({});
     const [ error, setError ] = useState(null);
-
-    useEffect(() => {
-        getTask();
-    }, []);
-    // SI usamos un arreglo vacio sólo se ejecuta al montarse.
     
-    const getTask = () => {
-        axios.get(`https://prueba-cinta-roja-mali.firebaseio.com/tasks/${id}.json`)
-        .then(({data, status}) => {
-            if (data !== null){
-                setTask(data);
-            } else {
-                setError('No existe esa tarea');
-            }
-        })
-        .catch(({response}) => {
-            setError(response);
-        });
-    }
+    useEffect(() => {
+        const getTask = () => {
+            axios.get(`https://prueba-cinta-roja-mali.firebaseio.com/tasks/${id}.json`)
+            .then(({data, status}) => {
+                if (data !== null){
+                    setTask(data);
+                } else {
+                    setError('No existe esa tarea');
+                }
+            })
+            .catch(({response}) => {
+                setError(response);
+            });
+        }
+        getTask();
+    }, [id]);
+    // SI usamos un arreglo vacio sólo se ejecuta al montarse.
     
     return(
     <Layout className="container mh-100" title="Home">
